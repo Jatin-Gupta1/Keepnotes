@@ -3,11 +3,9 @@ const btn = document.querySelector(".btn");
 const updateLSData = () => {
     const textAreaData = document.querySelectorAll("textarea");
     const notes = [];
-    console.log(textAreaData);
     textAreaData.forEach((note) => {
       return notes.push(note.value);
     });
-    console.log(notes);
   
     localStorage.setItem("notes", JSON.stringify(notes));
 };
@@ -27,8 +25,7 @@ const addnewnote = (text ='')=>{
     var notessec = document.querySelector(".notes")
 
     note.insertAdjacentHTML("afterbegin", htmlData);
-    notessec.appendChild(note)
-    console.log(note);
+    notessec.appendChild(note);
     const main = note.querySelector(".main");
     const textarea = note.querySelector("textarea")
 
