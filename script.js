@@ -30,7 +30,7 @@ const addnewnote = (text ='')=>{
     const textarea = note.querySelector("textarea")
 
     textarea.value = text;
-    main.innerHTML = text;
+    main.innerText = text;
 
     const delnote = note.querySelector(".delete")
     delnote.addEventListener("click",()=>{
@@ -46,7 +46,7 @@ const addnewnote = (text ='')=>{
 
     textarea.addEventListener("change", (event) => {
         const value = event.target.value;
-        main.innerHTML = value;
+        main.innerText = value;
         updateLSData();
     });
 
